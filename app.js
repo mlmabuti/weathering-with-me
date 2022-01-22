@@ -4,7 +4,6 @@ import forecast from "./utils/forecast.js";
 geocode("Quezon City Philippines", (error, data) => {
   console.log(error ?? data);
   forecast(data.lat, data.lon, (error, data) => {
-    console.log(error);
-    console.log(data);
+    console.log(error ?? data);
   });
 });
