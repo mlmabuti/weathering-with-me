@@ -6,6 +6,6 @@ geocode("Quezon City Philippines", (error, data) => {
 
   forecast(data.lat, data.lon, (error, data) => {
     console.log("Error", error);
-    console.log("Data", data);
+    console.log(data);
   });
 });
