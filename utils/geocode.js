@@ -7,9 +7,9 @@ const geocode = (address, callback) => {
 
   request({ url: url, json: true }, (error, response) => {
     if (error) {
-      callback("Unable to connect to server.", undefined);
+      callback("Unable to connect to server.");
     } else if (response.body.features.length === 0) {
-      callback("No results found.", undefined);
+      callback("No results found.");
     } else {
       callback(undefined, {
         lat: response.body.features[0].center[1],
