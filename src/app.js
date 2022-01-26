@@ -5,6 +5,9 @@ import path from "path";
 import express from "express";
 import hbs from "hbs";
 
+import geocode from "./utils/geocode.js";
+import forecast from "./utils/forecast.js";
+
 // setup dirname
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -51,8 +54,10 @@ app.get("/weather", (req, res) => {
     });
   }
 
-  res.send({
-    address: req.query.address,
+  geocode(req.query.address, (error, { lat, lon, loc } = {}) => {
+    forecast(lat, lon, (error, forecastData) => {
+      res.send(forecastData);
+    });
   });
 });
 
