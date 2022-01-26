@@ -45,8 +45,28 @@ app.get("/help", (req, res) => {
 });
 
 app.get("/weather", (req, res) => {
-  res.send("Your weather");
+  if (!req.query.address) {
+    return res.send({
+      error: "No address specified",
+    });
+  }
+
+  res.send({
+    address: req.query.address,
+  });
 });
+
+// app.get("/products", (req, res) => {
+//   if (!req.query.search) {
+//     return res.send({
+//       error: "No search query",
+//     });
+//   }
+//   console.log(req.query.search);
+//   res.send({
+//     products: [],
+//   });
+// });
 
 // for subdirs of help that do not exist
 app.get("/help/*", (req, res) => {
