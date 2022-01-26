@@ -24,6 +24,7 @@ hbs.registerPartials(partialsPath);
 
 app.use(express.static(publicDirectory)); // to serve static stuff in public directory
 
+// routes
 app.get("", (req, res) => {
   res.render("index", {
     // res.render is for template engines/ views
@@ -54,9 +55,15 @@ app.get("/weather", (req, res) => {
     });
   }
 
-  geocode(req.query.address, (error, { lat, lon, loc } = {}) => {
+  geocode(req.query.address, (error, { lat, lon, loc: location } = {}) => {
+    if (error) {
+      return res.send({ error });
+    }
     forecast(lat, lon, (error, forecastData) => {
-      res.send({ forecastData, loc });
+      if (error) {
+        return res.send({ error });
+      }
+      res.send({ location, forecastData, address: req.query.address });
     });
   });
 });
@@ -74,13 +81,13 @@ app.get("/weather", (req, res) => {
 // });
 
 // for subdirs of help that do not exist
-app.get("/help/*", (req, res) => {
-  res.render("404", {
-    title: "404",
-    errorMessage: "Help article not found.",
-    name: "Axojolotl",
-  });
-});
+// app.get("/help/*", (req, res) => {
+//   res.render("404", {
+//     title: "404",
+//     errorMessage: "Help article not found.",
+//     name: "Axojolotl",
+//   });
+// });
 
 // for dirs that do not exist
 app.get("*", (req, res) => {
