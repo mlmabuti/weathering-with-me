@@ -50,3 +50,13 @@ button {
   padding: 7px;
   color: white;
 }
+
+#message-1 {
+  font-size: 24px;
+  font-weight: lighter-bold;
+}
+
+#message-2 {
+  font-size: 20px;
+  font-style: oblique;
+}
