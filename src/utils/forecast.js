@@ -6,10 +6,10 @@ const forecast = (latitude, longitude, callback) => {
   request({ url, json: true }, (error, { body }) => {
     if (error) {
       callback("Unable to connect to weather service");
+    } else if (body.error.info) {
+      callback(body.error.info);
     } else if (body.error) {
-      callback(
-        "Unable to find location or weather service may be temporarily unavailable."
-      );
+      callback("Unable to find location.");
     } else {
       callback(undefined, {
         weather: body.current.weather_descriptions[0],
