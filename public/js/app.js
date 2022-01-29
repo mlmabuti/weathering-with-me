@@ -21,7 +21,7 @@ weatherForm.addEventListener("submit", (e) => {
         messageOne.textContent = data.location;
         messageTwo.textContent = `
                                     Time of observation ${data.forecastData.time}.
-                                    It is ${data.forecastData.weather}. 
+                                    ${data.forecastData.weather}. 
                                     The temperature is ${data.forecastData.temp} degrees. 
                                     It feels like ${data.forecastData.feel}.
                                     The humidity is ${data.forecastData.humidity}.
