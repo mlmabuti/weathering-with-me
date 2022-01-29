@@ -14,6 +14,9 @@ const __dirname = dirname(__filename);
 
 const app = express(); // create express app
 
+// create port for heroku
+const port = process.env.PORT || 3000;
+
 const publicDirectory = path.join(__dirname, "../public"); // create string path to public
 const viewsPath = path.join(__dirname, "../templates/views"); // create string path to templates
 const partialsPath = path.join(__dirname, "../templates/partials");
@@ -99,6 +102,6 @@ app.get("*", (req, res) => {
 });
 
 // launch express app on port 3000
-app.listen(3000, () => {
+app.listen(port, () => {
   console.log("App is running.");
 });
