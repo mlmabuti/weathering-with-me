@@ -19,9 +19,13 @@ weatherForm.addEventListener("submit", (e) => {
         messageOne.textContent = data.error;
       } else {
         messageOne.textContent = data.location;
-        messageTwo.textContent = `It is ${data.forecastData.weather}. 
+        messageTwo.textContent = `
+                                    Time of observation ${data.forecastData.time}.
+                                    It is ${data.forecastData.weather}. 
                                     The temperature is ${data.forecastData.temp} degrees. 
-                                    It feels like ${data.forecastData.feel}.`;
+                                    It feels like ${data.forecastData.feel}.
+                                    The humidity is ${data.forecastData.humidity}.
+                                    `;
       }
     });
   });
