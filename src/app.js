@@ -19,7 +19,6 @@ const port = process.env.PORT || 3000;
 
 const publicDirectory = path.join(__dirname, "../public"); // create string path to public
 const viewsPath = path.join(__dirname, "../templates/views"); // create string path to templates
-const partialsPath = path.join(__dirname, "../templates/partials");
 
 app.set("view engine", "hbs"); // setup handlebars engine
 app.set("views", viewsPath); //use custom path
