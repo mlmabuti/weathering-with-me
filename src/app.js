@@ -47,8 +47,6 @@ app.get("/help", (req, res) => {
   res.render("help", {
     title: "Weathering with me",
     name: "Axojolotl",
-    message:
-      "For more information, please visit https://github.com/axojolotl/weathering-with-me",
   });
 });
 
