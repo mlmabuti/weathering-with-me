@@ -1,15 +1,21 @@
-const weatherForm = document.querySelector("form");
+const searchBtn = document.querySelector("#search-btn");
 const search = document.querySelector("input");
 const messageOne = document.querySelector("#message-1");
-const messageTwo = document.querySelector("#message-2");
+const timeElement = document.querySelector("#time");
+const summaryElement = document.querySelector("#summary");
+const tempElement = document.querySelector("#temp");
+const humidityElement = document.querySelector("#humidity");
 
-weatherForm.addEventListener("submit", (e) => {
+searchBtn.addEventListener("click", (e) => {
   e.preventDefault(); // stop event from refreshing the page
 
   const location = search.value;
 
   messageOne.textContent = "Loading...";
-  messageTwo.textContent = "";
+  timeElement.textContent = "";
+  summaryElement.textContent = "";
+  tempElement.textContent = "";
+  humidityElement.textContent = "";
 
   fetch(`/weather?address=${location}`).then((response) => {
     response.json().then((data) => {
@@ -17,13 +23,10 @@ weatherForm.addEventListener("submit", (e) => {
         messageOne.textContent = data.error;
       } else {
         messageOne.textContent = data.location;
-        messageTwo.textContent = `
-                                    Time of observation ${data.forecastData.time}.
-                                    ${data.forecastData.weather}. 
-                                    The temperature is ${data.forecastData.temp} degrees. 
-                                    It feels like ${data.forecastData.feel}.
-                                    The humidity is ${data.forecastData.humidity}.
-                                    `;
+        timeElement.textContent = data.forecastData.time;
+        summaryElement.textContent = data.forecastData.weather;
+        tempElement.textContent = `${data.forecastData.temp}°F`;
+        humidityElement.textContent = `${data.forecastData.humidity}%`;
       }
     });
   });

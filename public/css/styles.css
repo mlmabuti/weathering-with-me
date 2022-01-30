@@ -1,62 +1,9 @@
-.portrait {
-  width: 20%;
-}
-
 body {
-  color: #333333;
-  font-family: arial, sans-serif;
-  margin-left: 15%;
-  margin-right: 15%;
-  padding: 0 16px;
-
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
-.main-content {
+#main-content {
   flex-grow: 1;
-}
-
-footer {
-  border-top: 1px solid rgb(175, 175, 175);
-  padding: 12px;
-}
-
-header {
-  margin-top: 15px;
-  margin-bottom: 30px;
-}
-
-h1 {
-  font-size: 48px;
-}
-
-header a {
-  color: #888888;
-  margin-right: 15px;
-  text-decoration: none;
-}
-
-input {
-  border: 1px solid #cccccc;
-  padding: 8px;
-}
-
-button {
-  cursor: pointer;
-  border: 1px solid #888888;
-  background-color: #888888;
-  padding: 7px;
-  color: white;
-}
-
-#message-1 {
-  font-size: 24px;
-  font-weight: lighter-bold;
-}
-
-#message-2 {
-  font-size: 20px;
-  font-style: oblique;
 }

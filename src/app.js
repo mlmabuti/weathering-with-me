@@ -23,7 +23,6 @@ const partialsPath = path.join(__dirname, "../templates/partials");
 
 app.set("view engine", "hbs"); // setup handlebars engine
 app.set("views", viewsPath); //use custom path
-hbs.registerPartials(partialsPath);
 
 app.use(express.static(publicDirectory)); // to serve static stuff in public directory
 
@@ -38,13 +37,6 @@ app.get("", (req, res) => {
 
 app.get("/about", (req, res) => {
   res.render("about", {
-    title: "Weathering with me",
-    name: "Axojolotl",
-  });
-});
-
-app.get("/help", (req, res) => {
-  res.render("help", {
     title: "Weathering with me",
     name: "Axojolotl",
   });
