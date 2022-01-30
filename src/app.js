@@ -83,13 +83,13 @@ app.get("/weather", (req, res) => {
 // });
 
 // for dirs that do not exist
-app.get("*", (req, res) => {
-  res.render("404", {
-    errorMessage: "Page Not Found",
-    title: "404",
-    name: "Axojolotl",
-  });
-});
+// app.get("*", (req, res) => {
+//   res.render("404", {
+//     errorMessage: "Page Not Found",
+//     title: "404",
+//     name: "Axojolotl",
+//   });
+// });
 
 // launch express app on port 3000
 app.listen(port, () => {
