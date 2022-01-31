@@ -6,10 +6,6 @@ A basic weather app to practice API requests with mapbox and weatherstack.
 
 <img src="./public/img/demo.png">
 
-## Navbar Collapse
-
-<img src="./public/img/demo2.png">
-
 ## Information Page
 
 <img src="./public/img/demo3.png">
