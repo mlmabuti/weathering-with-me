@@ -4,7 +4,15 @@ A basic weather app to practice API requests with mapbox and weatherstack.
 
 ## Main Page
 
-<img src="https://i.imgur.com/j9cJQBr.png">
+<img src="./public/img/demo.png">
+
+## Navbar Collapse
+
+<img src="./public/img/demo2.png">
+
+## Information Page
+
+<img src="./public/img/demo3.png">
 
 ## Information
 
