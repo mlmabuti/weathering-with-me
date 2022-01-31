@@ -1,7 +1,7 @@
 import request from "request";
 
 const forecast = (latitude, longitude, callback) => {
-  const url = `http://api.weatherstack.com/current?access_key=d1f5b90f4129ff91c116dfdea1dd08a3&query=${latitude},${longitude}&units=f`;
+  const url = `http://api.weatherstack.com/current?access_key=d1f5b90f4129ff91c116dfdea1dd08a3&query=${latitude},${longitude}`;
   // d1f5b90f4129ff91c116dfdea1dd08a3 73665dadafeaaac2296d1c346a620642
   request({ url, json: true }, (error, { body }) => {
     if (error) {

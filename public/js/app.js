@@ -25,7 +25,7 @@ searchBtn.addEventListener("click", (e) => {
         messageOne.textContent = data.location;
         timeElement.textContent = data.forecastData.time;
         summaryElement.textContent = data.forecastData.weather;
-        tempElement.textContent = `${data.forecastData.temp}°F`;
+        tempElement.textContent = `${data.forecastData.temp}°C`;
         humidityElement.textContent = `${data.forecastData.humidity}%`;
       }
     });
