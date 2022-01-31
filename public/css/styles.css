@@ -4,6 +4,26 @@ body {
   min-height: 100vh;
 }
 
-#main-content {
+#main-content,
+#main-section {
   flex-grow: 1;
+}
+
+nav,
+footer {
+  background-color: #191919;
+}
+
+.card,
+input {
+  opacity: 80%;
+}
+
+input {
+  padding: 4px;
+}
+
+#main-content {
+  background-color: #242424;
+  color: #fff;
 }
