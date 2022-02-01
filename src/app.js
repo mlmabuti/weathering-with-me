@@ -61,36 +61,6 @@ app.get("/weather", (req, res) => {
   });
 });
 
-// app.get("/products", (req, res) => {
-//   if (!req.query.search) {
-//     return res.send({
-//       error: "No search query",
-//     });
-//   }
-//   console.log(req.query.search);
-//   res.send({
-//     products: [],
-//   });
-// });
-
-// for subdirs of help that do not exist
-// app.get("/help/*", (req, res) => {
-//   res.render("404", {
-//     title: "404",
-//     errorMessage: "Help article not found.",
-//     name: "Axojolotl",
-//   });
-// });
-
-// for dirs that do not exist
-// app.get("*", (req, res) => {
-//   res.render("404", {
-//     errorMessage: "Page Not Found",
-//     title: "404",
-//     name: "Axojolotl",
-//   });
-// });
-
 // launch express app on port 3000
 app.listen(port, () => {
   console.log("App is running.");
