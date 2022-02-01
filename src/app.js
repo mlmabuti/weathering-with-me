@@ -3,7 +3,7 @@ import { fileURLToPath } from "url";
 import { dirname } from "path";
 import path from "path";
 import express from "express";
-import hbs from "hbs";
+// import hbs from "hbs";
 
 import geocode from "./utils/geocode.js";
 import forecast from "./utils/forecast.js";
