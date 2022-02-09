@@ -18,5 +18,6 @@ Note: This app is using "free" API subscriptions. Mapbox offers 100,000 free req
 
 ## Possible updates
 
-Clean up the code
-Use express Router object.
+* Clean up the code.
+* Use express Router object.
+* Replace callbacks with promises.
