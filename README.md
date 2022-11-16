@@ -2,13 +2,8 @@
 
 A basic weather app to practice API requests with mapbox and weatherstack.
 
-## Main Page
-
-<img src="./public/img/demo.png">
-
-## Information Page
-
-<img src="./public/img/demo3.png">
+# Preview
+![preview-gif](https://user-images.githubusercontent.com/72655919/202119870-70932f39-3ae8-4b6e-87fd-1ee8c24b678b.gif)
 
 ## Information
 
